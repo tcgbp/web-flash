@@ -12,7 +12,6 @@
         <module>flash-api</module>
         <module>flash-core</module>
         <module>flash-generator</module>
-        <module>flash-workflow</module>
     </modules>
 
     <properties>

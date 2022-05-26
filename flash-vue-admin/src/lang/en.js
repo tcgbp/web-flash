@@ -27,11 +27,7 @@ export default {
     msg: 'History',
     msgTpl: 'Template',
     msgSender: 'Sender',
-    document: 'Document',
-    workFlow: 'Work Flow',
-    processDefinition: 'Process Definition',
-    workFlowRequest: 'Process Instance',
-    workFlowTask: 'My Tasks'
+    classManage: 'Class Manage'
   },
   navbar: {
     logOut: 'Log Out',

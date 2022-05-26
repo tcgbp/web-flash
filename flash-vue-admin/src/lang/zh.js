@@ -28,12 +28,7 @@ export default {
     msg: '历史消息',
     msgTpl: '消息模板',
     msgSender: '消息发送器',
-    document: '在线文档',
-    workFlow: '工作流',
-    processDefinition: '流程定义',
-    workFlowRequest: '申请列表',
-    workFlowTask: '待办任务',
-
+    classManage: '班级管理'
   },
   navbar: {
     logOut: '退出登录',

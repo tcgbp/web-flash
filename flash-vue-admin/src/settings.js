@@ -1,6 +1,6 @@
 module.exports = {
 
-  title: 'web-flash后台管理',
+  title: '鹰吉利消防培训后台管理',
 
   /**
    * @type {boolean} true | false
