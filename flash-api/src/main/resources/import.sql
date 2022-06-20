@@ -206,9 +206,12 @@ INSERT INTO `t_sys_menu` (`id`, create_by, create_time, modify_by, modify_time, 
 INSERT INTO `t_sys_menu` (`id`, create_by, create_time, modify_by, modify_time, code, component, hidden, icon, ismenu, isopen, `levels`, `name`, num, pcode, pcodes, tips, url) VALUES ('69', '1', '2019-07-31 22:04:30', '1', '2019-07-31 22:04:30', 'channelDelete', null, '0', null, '0', null, '3', '删除栏目', '2', 'channel', '[0],[cms],[channel],', null, '/channel/remove');
 INSERT INTO `t_sys_menu` (`id`, create_by, create_time, modify_by, modify_time, code, component, hidden, icon, ismenu, isopen, `levels`, `name`, num, pcode, pcodes, tips, url) VALUES ('70', '1', '2019-07-31 22:04:30', '1', '2019-07-31 22:04:30', 'deleteArticle', null, '0', null, '0', null, '3', '删除文章', '2', 'article', '[0],[cms],[article]', null, '/article/remove');
 INSERT INTO `t_sys_menu` (`id`, create_by, create_time, modify_by, modify_time, code, component, hidden, icon, ismenu, isopen, `levels`, `name`, num, pcode, pcodes, tips, url) VALUES ('79', '1', '2021-10-28 14:19:18', '1', '2021-10-28 14:19:18', 'cmsDemo', 'views/cms/demo/index', '0', 'phone', '1', null, '2', 'cms手机站', '7', 'cms', '[0],[cms],', null, '/demo');
-INSERT INTO `t_sys_menu` (`id`, create_by, create_time, modify_by, modify_time, code, component, hidden, icon, ismenu, isopen, `levels`, `name`, num, pcode, pcodes, tips, url) VALUES ('80', '1', '2019-07-31 22:04:30', '1', '2019-07-31 22:04:30', 'class', 'layout', '0', 'people', '1', '1', '1', '班级管理', '5', '0', '[0],', null, '/class');
-INSERT INTO `t_sys_menu` (`id`, create_by, create_time, modify_by, modify_time, code, component, hidden, icon, ismenu, isopen, `levels`, `name`, num, pcode, pcodes, tips, url) VALUES ('81', '1', '2019-07-31 22:04:30', '1', '2019-07-31 22:04:30', 'classManage', 'views/train/class/index', '0', 'people', '1', '1', '1', '班级列表', '1', 'class', '[0],[class],', null, '/classMgr');
-
+INSERT INTO `t_sys_menu` (`id`, create_by, create_time, modify_by, modify_time, code, component, hidden, icon, ismenu, isopen, `levels`, `name`, num, pcode, pcodes, tips, url) VALUES ('80', '1', '2019-07-31 22:04:30', '1', '2019-07-31 22:04:30', 'training', 'layout', '0', 'skill', '1', '1', '1', '培训管理', '5', '0', '[0],', null, '/training');
+INSERT INTO `t_sys_menu` (`id`, create_by, create_time, modify_by, modify_time, code, component, hidden, icon, ismenu, isopen, `levels`, `name`, num, pcode, pcodes, tips, url) VALUES ('81', '1', '2019-07-31 22:04:30', '1', '2019-07-31 22:04:30', 'classGrade', 'views/training/classGrade/index', '0', 'peoples', '1', '1', '1', '班级管理', '1', 'training', '[0],[training],', null, '/classGrade');
+INSERT INTO `t_sys_menu` (`id`, create_by, create_time, modify_by, modify_time, code, component, hidden, icon, ismenu, isopen, `levels`, `name`, num, pcode, pcodes, tips, url) VALUES ('82', '1', '2019-07-31 22:04:30', '1', '2019-07-31 22:04:30', 'student', 'views/training/student/index', '0', 'people', '1', '1', '1', '学生管理', '1', 'training', '[0],[training],', null, '/student');
+INSERT INTO `t_sys_menu` (`id`, create_by, create_time, modify_by, modify_time, code, component, hidden, icon, ismenu, isopen, `levels`, `name`, num, pcode, pcodes, tips, url) VALUES ('83', '1', '2019-07-31 22:04:30', '1', '2019-07-31 22:04:30', 'studentAdd', null, '0', null, '0', null, '3', '添加学生', '1', 'student', '[0],[training],[student],', null, '/student/add');
+INSERT INTO `t_sys_menu` (`id`, create_by, create_time, modify_by, modify_time, code, component, hidden, icon, ismenu, isopen, `levels`, `name`, num, pcode, pcodes, tips, url) VALUES ('84', '1', '2019-07-31 22:04:30', '1', '2019-07-31 22:04:30', 'studentUpdate', null, '0', null, '0', null, '3', '更新学生', '1', 'student', '[0],[training],[student],', null, '/student/update');
+INSERT INTO `t_sys_menu` (`id`, create_by, create_time, modify_by, modify_time, code, component, hidden, icon, ismenu, isopen, `levels`, `name`, num, pcode, pcodes, tips, url) VALUES ('85', '1', '2019-07-31 22:04:30', '1', '2019-07-31 22:04:30', 'studentDelete', null, '0', null, '0', null, '3', '删除学生', '1', 'student', '[0],[training],[student],', null, '/student/delete');
 
 -- ----------------------------
 -- Records of t_sys_notice
@@ -338,6 +341,18 @@ INSERT INTO `t_sys_relation` (id, menuid, roleid) VALUES ('156', '81', '2');
 INSERT INTO `t_sys_relation` (id, menuid, roleid) VALUES ('157', '81', '3');
 INSERT INTO `t_sys_relation` (id, menuid, roleid) VALUES ('158', '81', '3');
 INSERT INTO `t_sys_relation` (id, menuid, roleid) VALUES ('159', '81', '3');
+INSERT INTO `t_sys_relation` (id, menuid, roleid) VALUES ('161', '82', '1');
+INSERT INTO `t_sys_relation` (id, menuid, roleid) VALUES ('162', '82', '1');
+INSERT INTO `t_sys_relation` (id, menuid, roleid) VALUES ('163', '82', '1');
+INSERT INTO `t_sys_relation` (id, menuid, roleid) VALUES ('164', '82', '2');
+INSERT INTO `t_sys_relation` (id, menuid, roleid) VALUES ('165', '82', '2');
+INSERT INTO `t_sys_relation` (id, menuid, roleid) VALUES ('166', '82', '2');
+INSERT INTO `t_sys_relation` (id, menuid, roleid) VALUES ('167', '82', '3');
+INSERT INTO `t_sys_relation` (id, menuid, roleid) VALUES ('168', '82', '3');
+INSERT INTO `t_sys_relation` (id, menuid, roleid) VALUES ('169', '82', '3');
+INSERT INTO `t_sys_relation` (id, menuid, roleid) VALUES ('170', '83', '1');
+INSERT INTO `t_sys_relation` (id, menuid, roleid) VALUES ('171', '84', '1');
+INSERT INTO `t_sys_relation` (id, menuid, roleid) VALUES ('172', '85', '1');
 
 -- ----------------------------
 -- Records of t_sys_task

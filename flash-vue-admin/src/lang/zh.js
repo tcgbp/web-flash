@@ -28,7 +28,9 @@ export default {
     msg: '历史消息',
     msgTpl: '消息模板',
     msgSender: '消息发送器',
-    classManage: '班级管理'
+    training: '培训管理',
+    student: '学生管理',
+    classGrade: '班级管理'
   },
   navbar: {
     logOut: '退出登录',
@@ -41,7 +43,7 @@ export default {
     size: '布局大小'
   },
   login: {
-    title: 'web-flash',
+    title: '鹰吉利消防培训管理系统',
     errorAccount: '请输入5到32位的数字和字母',
     errorPassword: '密码至少位5位',
     logIn: '登录',
@@ -118,9 +120,6 @@ export default {
     nameInput: '请输入参数名',
     valueInput: '请输入参数值',
     lengthValidation: '长度在 2 到 20 个字符'
-  },
-  workflow: {
-    startProcessInstance: '发起申请'
   }
 }
 

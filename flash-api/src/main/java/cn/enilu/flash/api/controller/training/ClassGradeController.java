@@ -1,8 +1,8 @@
-package cn.enilu.flash.api.controller.train;
+package cn.enilu.flash.api.controller.training;
 
 import cn.enilu.flash.api.controller.BaseController;
-import cn.enilu.flash.bean.entity.train.Class;
-import cn.enilu.flash.service.train.ClassService;
+import cn.enilu.flash.bean.entity.training.ClassGrade;
+import cn.enilu.flash.service.training.ClassGradeService;
 
 import cn.enilu.flash.bean.core.BussinessLog;
 import cn.enilu.flash.bean.constant.factory.PageFactory;
@@ -24,42 +24,42 @@ import org.springframework.web.bind.annotation.*;
 
 
 @RestController
-@RequestMapping("/class")
-public class ClassController extends BaseController {
+@RequestMapping("/classGrade")
+public class ClassGradeController extends BaseController {
 	private  Logger logger = LoggerFactory.getLogger(getClass());
 	@Autowired
-	private ClassService classService;
+	private ClassGradeService classGradeService;
 
 	@GetMapping(value = "/list")
-	@RequiresPermissions(value = "class")
+	@RequiresPermissions(value = "classGrade")
 	public Ret list(@RequestParam(required = false) Long id) {
-		Page<Class> page = new PageFactory<Class>().defaultPage();
+		Page<ClassGrade> page = new PageFactory<ClassGrade>().defaultPage();
 		page.addFilter("id",id);
-		page = classService.queryPage(page);
+		page = classGradeService.queryPage(page);
 		return Rets.success(page);
 	}
 	@PostMapping
 	@BussinessLog(value = "新增班级", key = "name")
-	@RequiresPermissions(value = "classAdd")
-	public Ret add(@ModelAttribute Class cls){
-		classService.insert(cls);
+	@RequiresPermissions(value = "classGradeAdd")
+	public Ret add(@ModelAttribute ClassGrade classGrade){
+		classGradeService.insert(classGrade);
 		return Rets.success();
 	}
 	@PutMapping
 	@BussinessLog(value = "更新班级", key = "name")
-	@RequiresPermissions(value = "classUpdate")
-	public Ret update(@ModelAttribute Class cls){
-		classService.update(cls);
+	@RequiresPermissions(value = "classGradeUpdate")
+	public Ret update(@ModelAttribute ClassGrade classGrade){
+		classGradeService.update(classGrade);
 		return Rets.success();
 	}
 	@DeleteMapping
 	@BussinessLog(value = "删除班级", key = "id")
-	@RequiresPermissions(value = "classDelete")
+	@RequiresPermissions(value = "classGradeDelete")
 	public Ret remove(Long id){
 		if (id == null) {
 			throw new ApplicationException(BizExceptionEnum.REQUEST_NULL);
 		}
-		classService.delete(id);
+		classGradeService.delete(id);
 		return Rets.success();
 	}
 }

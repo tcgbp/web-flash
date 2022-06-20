@@ -1,7 +1,7 @@
-package cn.enilu.flash.dao.train;
+package cn.enilu.flash.dao.training;
 
 
-import cn.enilu.flash.bean.entity.train.Student;
+import cn.enilu.flash.bean.entity.training.Student;
 import cn.enilu.flash.dao.BaseRepository;
 
 

@@ -1,4 +1,4 @@
-package cn.enilu.flash.bean.entity.train;
+package cn.enilu.flash.bean.entity.training;
 
 
 import cn.enilu.flash.bean.entity.BaseEntity;
@@ -18,7 +18,7 @@ import javax.persistence.EntityListeners;
 @Table(appliesTo = "t_train_class", comment = "班级")
 @Data
 @EntityListeners(AuditingEntityListener.class)
-public class Class extends BaseEntity {
+public class ClassGrade extends BaseEntity {
     @Column(columnDefinition = "VARCHAR(32) COMMENT '班名'")
     private String name;
     @Column(columnDefinition = "INT COMMENT '班级类型'")

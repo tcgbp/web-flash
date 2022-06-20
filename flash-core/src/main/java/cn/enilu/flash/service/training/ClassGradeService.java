@@ -1,8 +1,8 @@
-package cn.enilu.flash.service.train;
+package cn.enilu.flash.service.training;
 
 
-import cn.enilu.flash.bean.entity.train.Student;
-import cn.enilu.flash.dao.train.StudentRepository;
+import cn.enilu.flash.bean.entity.training.ClassGrade;
+import cn.enilu.flash.dao.training.ClassGradeRepository;
 
 import cn.enilu.flash.service.BaseService;
 import org.slf4j.Logger;
@@ -11,10 +11,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class StudentService extends BaseService<Student,Long,StudentRepository>  {
+public class ClassGradeService extends BaseService<ClassGrade,Long,ClassGradeRepository>  {
     private Logger logger = LoggerFactory.getLogger(getClass());
     @Autowired
-    private StudentRepository studentRepository;
+    private ClassGradeRepository classGradeRepository;
 
 }
 

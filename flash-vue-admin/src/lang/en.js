@@ -27,7 +27,9 @@ export default {
     msg: 'History',
     msgTpl: 'Template',
     msgSender: 'Sender',
-    classManage: 'Class Manage'
+    training: 'Training',
+    student: 'Student',
+    classGrade: 'Class'
   },
   navbar: {
     logOut: 'Log Out',

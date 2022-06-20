@@ -1,8 +1,8 @@
-package cn.enilu.flash.api.controller.train;
+package cn.enilu.flash.api.controller.training;
 
 import cn.enilu.flash.api.controller.BaseController;
-import cn.enilu.flash.bean.entity.train.Student;
-import cn.enilu.flash.service.train.StudentService;
+import cn.enilu.flash.bean.entity.training.Student;
+import cn.enilu.flash.service.training.StudentService;
 
 import cn.enilu.flash.bean.core.BussinessLog;
 import cn.enilu.flash.bean.constant.factory.PageFactory;

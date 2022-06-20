@@ -1,29 +1,19 @@
-import studentApi from '@/api/train/student'
+import classGradeApi from '@/api/training/classGrade'
 import permission from '@/directive/permission/index.js'
 
 export default {
   //如果需要标签页缓存生效，则需要保证name值和菜单管理中的编码值一致
-  name: 'student',
+  name: 'classGrade',
   directives: { permission },
   data() {
     return {
       formVisible: false,
-      formTitle: '添加学生',
+      formTitle: '添加班级',
       isAdd: true,
       form: {
-        avatar:'',
-        account:'',
-        password:'',
-        salt:'',
         name:'',
-        birthday:'',
-        sex:'',
-        email:'',
-        phone:'',
-        roleid:'',
-        deptid:'',
-        status:'',
-        version:'',
+        type:'',
+        teacher:'',
         id: ''
       },
       listQuery: {
@@ -68,7 +58,7 @@ export default {
     },
     fetchData() {
       this.listLoading = true
-        studentApi.getList(this.listQuery).then(response => {
+        classGradeApi.getList(this.listQuery).then(response => {
         this.list = response.data.records
         this.listLoading = false
         this.total = response.data.total
@@ -109,24 +99,14 @@ export default {
     },
     resetForm() {
       this.form = {
-        avatar:'',
-        account:'',
-        password:'',
-        salt:'',
         name:'',
-        birthday:'',
-        sex:'',
-        email:'',
-        phone:'',
-        roleid:'',
-        deptid:'',
-        status:'',
-        version:'',
+        type:'',
+        teacher:'',
         id: ''
       }
     },
     add() {
-      this.formTitle = '添加学生'
+      this.formTitle = '添加班级'
       this.formVisible = true
       this.isAdd = true
 
@@ -140,22 +120,12 @@ export default {
         if (valid) {
             const formData = {
                 id:this.form.id,
-                avatar:this.form.avatar,
-                account:this.form.account,
-                password:this.form.password,
-                salt:this.form.salt,
                 name:this.form.name,
-                birthday:this.form.birthday,
-                sex:this.form.sex,
-                email:this.form.email,
-                phone:this.form.phone,
-                roleid:this.form.roleid,
-                deptid:this.form.deptid,
-                status:this.form.status,
-                version:this.form.version,
+                type:this.form.type,
+                teacher:this.form.teacher,
             }
             if(formData.id){
-                studentApi.update(formData).then(response => {
+                classGradeApi.update(formData).then(response => {
                     this.$message({
                         message: this.$t('common.optionSuccess'),
                         type: 'success'
@@ -164,7 +134,7 @@ export default {
                     this.formVisible = false
                 })
             }else{
-                studentApi.add(formData).then(response => {
+                classGradeApi.add(formData).then(response => {
                     this.$message({
                         message: this.$t('common.optionSuccess'),
                         type: 'success'
@@ -197,7 +167,7 @@ export default {
         this.isAdd = false
         let form = Object.assign({}, this.selRow)
         this.form = form
-        this.formTitle = '编辑学生'
+        this.formTitle = '编辑班级'
         this.formVisible = true
 
         if(this.$refs['form'] !== undefined) {
@@ -218,7 +188,7 @@ export default {
           cancelButtonText: this.$t('button.cancel'),
           type: 'warning'
         }).then(() => {
-            studentApi.remove(id).then(response => {
+            classGradeApi.remove(id).then(response => {
             this.$message({
               message: this.$t('common.optionSuccess'),
               type: 'success'

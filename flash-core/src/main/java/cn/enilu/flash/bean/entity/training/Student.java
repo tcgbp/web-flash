@@ -1,4 +1,4 @@
-package cn.enilu.flash.bean.entity.train;
+package cn.enilu.flash.bean.entity.training;
 
 
 import cn.enilu.flash.bean.entity.BaseEntity;
@@ -33,5 +33,5 @@ public class Student extends BaseEntity {
     private Integer version;
     @JoinColumn(name = "classid", insertable = false, updatable = false, foreignKey = @ForeignKey(name = "none", value = ConstraintMode.NO_CONSTRAINT))
     @ManyToOne(fetch = FetchType.EAGER)
-    private Class joinedClass;
+    private ClassGrade joinedClass;
 }
